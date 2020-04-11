@@ -36,6 +36,7 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw/lib/)
 
 # DEPENDENCIES
 add_subdirectory(libs/glfw libs/glfw/lib)
+add_subdirectory(libs/glew/build/cmake libs/glew/lib)
 
 # PROJECTS
 add_subdirectory(opengl0)
