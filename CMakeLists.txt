@@ -22,31 +22,18 @@ add_definitions(
     -DGLEW_STATIC
 )
 
-if(MSVC)
-  if( MSVC11 )
-    set(GLFW_LIB_DIR "vc2012")
-  elseif( MSVC12 )
-    set(GLFW_LIB_DIR "vc2013")
-  elseif( MSVC_VERSION LESS 1910)
-    set(GLFW_LIB_DIR "vc2015")
-  elseif( MSVC_VERSION LESS 1920)
-    set(GLFW_LIB_DIR "vc2017")
-  elseif( MSVC_VERSION LESS 1930)
-    set(GLFW_LIB_DIR "vc2019")
-  endif()
-endif()
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/assimp-5.0.1/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/assimp/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glew-cmake/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glm)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/stb)
 
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/assimp-5.0.1/lib)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/assimp/lib)
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glew-cmake/lib)
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw/lib/)
 
 # DEPENDENCIES
+add_subdirectory(libs/assimp)
 add_subdirectory(libs/glew-cmake/build/cmake)
 add_subdirectory(libs/glfw)
 
