@@ -17,4 +17,4 @@ Cały [mój kanał](https://www.youtube.com/user/LeftarCode) stara się wprowadz
  - **Visual Studio 2019** - wszystkie projekty w tym repozytorium zostały stworzone przy użyciu tego IDE. W przyszłości na pewno pojawi `CMakeLists.txt` żeby każdy z was mógł zbudować projekt pod środowisko z którego korzysta
  - **CMake** - do zbudowania projektów oraz biblioteki **Assimp**
 # Jak używać
- - `cmake --build` - tworzy projekt z całego kodu, dla prostoty użytkownika zalecam wykorzystanie wersji z [GUI](https://cmake.org/download/)
+ - `cmake . -B build` - tworzy projekt z całego kodu, dla prostoty użytkownika zalecam wykorzystanie wersji z [GUI](https://cmake.org/download/)
