@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.10)
 
 project(opengl)
 
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+
 IF(NOT MSVC)
   MESSAGE(FATAL_ERROR "Compilers other than Visual Studio is not yet supported")
 ENDIF()
@@ -22,12 +26,16 @@ endif()
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/assimp-5.0.1/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glew-2.1.0/include)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw-3.3.2/include)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glm-0.9.9.7)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glm)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/stb)
 
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/assimp-5.0.1/lib)
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glew-2.1.0/lib/Release/x64)
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw-3.3.2/lib-${GLFW_LIB_DIR})
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/glfw/lib/)
 
+# DEPENDENCIES
+add_subdirectory(libs/glfw libs/glfw/lib)
+
+# PROJECTS
 add_subdirectory(opengl0)
