@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(opengl)
+project(opengltutorial)
 
 IF(NOT MSVC)
   MESSAGE(FATAL_ERROR "Compilers other than Visual Studio is not yet supported")
@@ -38,4 +38,4 @@ add_subdirectory(libs/glew-cmake/build/cmake)
 add_subdirectory(libs/glfw)
 
 # PROJECTS
-add_subdirectory(opengl0)
+add_subdirectory(episode0)
