@@ -14,7 +14,7 @@ Cały [mój kanał](https://www.youtube.com/user/LeftarCode) stara się wprowadz
  - [**GLM**](https://glm.g-truc.net/0.9.9/index.html) - bardzo prosta, ale niesamowicie potężna biblioteka do obliczeń matematycznych
  - [**STBImage**](https://github.com/nothings/stb) - prosta biblioteka do ładowania tekstur
 ### Narzędzia
- - **Visual Studio 2019** - wszystkie projekty w tym repozytorium zostały stworzone przy użyciu tego IDE. W przyszłości na pewno pojawi `CMakeLists.txt` żeby każdy z was mógł zbudować projekt pod środowisko z którego korzysta
+ - **Visual Studio 2019** - wszystkie projekty w tym repozytorium zostały stworzone przy użyciu tego IDE. Na razie całość jest testowana w tym środowisku i build na pewno uda się uruchomić. W przyszłości planuję stworzenie build'u dla pozostałych popularnych środowisk
  - **CMake** - do zbudowania projektów oraz biblioteki **Assimp**
 # Jak używać
  - `cmake . -B build` - tworzy projekt z całego kodu, dla prostoty użytkownika zalecam wykorzystanie wersji z [GUI](https://cmake.org/download/)
