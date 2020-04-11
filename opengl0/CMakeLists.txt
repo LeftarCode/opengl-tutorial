@@ -18,5 +18,6 @@ endif()
 
 target_link_libraries(opengl0 optimized assimp-${ASSIMP_MSVC_VERSION}-mt.lib)
 target_link_libraries(opengl0 debug assimp-${ASSIMP_MSVC_VERSION}-mtd.lib)
-target_link_libraries(opengl0 glew32s.lib)
+
+target_link_libraries(opengl0 debug glew_s)
 target_link_libraries(opengl0 glfw)
